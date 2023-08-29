@@ -18,15 +18,17 @@ class HorizontalTimelineLayoverWidget extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 25),
-              SizedBox(
-                width: 80,
-                child: Text(
-                  model.description,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Color(0xffFF2F48),
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
+              Expanded(
+                child: SizedBox(
+                  width: 100,
+                  child: Text(
+                    model.description,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      color: Color(0xffFF2F48),
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),

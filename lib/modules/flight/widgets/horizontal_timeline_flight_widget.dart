@@ -17,21 +17,28 @@ class HorizontalTimelineFlightWidget extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 30),
-              Row(
-                children: [
-                  Image.asset(
-                    "assets/spicejet.png",
-                    width: 25,
+              Expanded(
+                child: SizedBox(
+                  width: 100,
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        "assets/spicejet.png",
+                        width: 25,
+                      ),
+                      const SizedBox(width: 5),
+                      Expanded(
+                        child: Text(
+                          model.name,
+                          style: const TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(width: 5),
-                  Text(
-                    model.name,
-                    style: const TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ],
+                ),
               ),
               const SizedBox(height: 5),
               Text(

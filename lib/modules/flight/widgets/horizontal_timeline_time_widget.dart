@@ -76,11 +76,17 @@ class HorizontalTimelineTimeWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5),
-              Text(
-                model.description,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
+              Expanded(
+                child: SizedBox(
+                  width: 100,
+                  child: Text(
+                    model.description,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
                 ),
               ),
             ],
