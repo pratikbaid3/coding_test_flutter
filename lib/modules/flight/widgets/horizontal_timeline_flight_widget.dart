@@ -15,6 +15,7 @@ class HorizontalTimelineFlightWidget extends StatelessWidget {
       children: [
         Expanded(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 30),
               Expanded(
@@ -41,11 +42,19 @@ class HorizontalTimelineFlightWidget extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 5),
-              Text(
-                model.id,
-                style: const TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
+              Expanded(
+                child: SizedBox(
+                  width: 100,
+                  child: Center(
+                    child: Text(
+                      model.id,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 10),
